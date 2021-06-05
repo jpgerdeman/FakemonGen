@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "timestamp": 1622924893180,
+  "index": "/FakemonGen/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/FakemonGen/favicon.ico",
+        "/FakemonGen/index.html",
+        "/FakemonGen/main-es2017.8ff9ffdaed66601d1c47.js",
+        "/FakemonGen/main-es5.8ff9ffdaed66601d1c47.js",
+        "/FakemonGen/manifest.webmanifest",
+        "/FakemonGen/polyfills-es2017.22ec296fd53bf8e2c142.js",
+        "/FakemonGen/polyfills-es5.b5b8fec8ab3ea7a8772d.js",
+        "/FakemonGen/runtime-es2017.2e7be052451069c7a393.js",
+        "/FakemonGen/runtime-es5.2e7be052451069c7a393.js",
+        "/FakemonGen/styles.ae94bdd1c3fd862af2f8.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/FakemonGen/assets/icons/icon-128x128.png",
+        "/FakemonGen/assets/icons/icon-144x144.png",
+        "/FakemonGen/assets/icons/icon-152x152.png",
+        "/FakemonGen/assets/icons/icon-192x192.png",
+        "/FakemonGen/assets/icons/icon-384x384.png",
+        "/FakemonGen/assets/icons/icon-512x512.png",
+        "/FakemonGen/assets/icons/icon-72x72.png",
+        "/FakemonGen/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/FakemonGen/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/FakemonGen/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/FakemonGen/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/FakemonGen/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/FakemonGen/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/FakemonGen/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/FakemonGen/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/FakemonGen/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/FakemonGen/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/FakemonGen/index.html": "125b988f7f3acf05c3074aa435cb33b9e38b1bb3",
+    "/FakemonGen/main-es2017.8ff9ffdaed66601d1c47.js": "92c9938e57d8920feda52365cf65fc03a89d4997",
+    "/FakemonGen/main-es5.8ff9ffdaed66601d1c47.js": "86f6f55331b9f3dd782d0d018abe63cd449db0f8",
+    "/FakemonGen/manifest.webmanifest": "6c8887deba1993e224dfece6dc397403c970e1c0",
+    "/FakemonGen/polyfills-es2017.22ec296fd53bf8e2c142.js": "f26c5f89b55d84e2174af505c14456c94bcb6578",
+    "/FakemonGen/polyfills-es5.b5b8fec8ab3ea7a8772d.js": "562c239a0d9fb1f995322bfc873315ce41259584",
+    "/FakemonGen/runtime-es2017.2e7be052451069c7a393.js": "fc87cf595d273297af7fb4f361be597d5b40f43c",
+    "/FakemonGen/runtime-es5.2e7be052451069c7a393.js": "fc87cf595d273297af7fb4f361be597d5b40f43c",
+    "/FakemonGen/styles.ae94bdd1c3fd862af2f8.css": "4da86a17e4a42d435fe40c9990e314e6a309b750"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
