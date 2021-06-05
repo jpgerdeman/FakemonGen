@@ -1,0 +1,24 @@
+.stat-bar {
+  border-radius: 4px;
+  height: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #001122;
+  &.bar-judge-0 {
+    background-color: red;
+  }
+  &.bar-judge-1 {
+    background-color: orange;
+  }
+  &.bar-judge-2 {
+    background-color: yellow;
+  }
+  &.bar-judge-3 {
+     background-color: yellowgreen;
+   }
+  &.bar-judge-4 {
+    background-color: greenyellow;
+  }
+  &.bar-judge-5 {
+    background-color: green;
+  }
+}

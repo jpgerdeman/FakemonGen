@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Design Inspiration</mat-card-title>
+    <p>Create a Pokemon based on 2 of the following</p>
+    <ul *ngFor="let i of inspirations">
+      <li><a href="https://en.wikipedia.org/wiki/{{i}}">{{i}}</a></li>
+    </ul>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Abilities</mat-card-title>
+    <ul *ngFor="let i of abilities">
+      <li>{{i.name}} - {{i.description}}</li>
+    </ul>
+    <p>Hidden Ability</p>
+    <ul>
+      <li>{{hiddenAbility.name}} - {{hiddenAbility.description}}</li>
+    </ul>
+  </mat-card-content>
+</mat-card>

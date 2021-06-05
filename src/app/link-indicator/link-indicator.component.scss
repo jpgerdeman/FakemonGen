@@ -1,0 +1,50 @@
+$bgColor: #fff;
+$color: blue;
+$width: 10px;
+
+.link-with-indication {
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+.link-indicator {
+  margin-left:0.3em;
+  display: inline-block;
+  position: relative;
+  width: $width;
+  height: $width;
+  border: 1px solid $color;
+  border-radius: $width/10 0 $width/10 $width/10;
+  box-shadow: -3px 3px 15px rgba(0, 0, 0, 0.2) ;
+  .arrow {
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 1.25 * $width;
+    background: $color;
+    transform: rotate(45deg) translate(-1.2px, -1.5px);
+    transform-origin: center center;
+
+    &::after, &::before {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 2px;
+      background: $bgColor;
+      transform-origin: top center;
+    }
+
+    &::after {
+      top: 1px;
+      right: 3px;
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      top: 1.5px;
+      left: 2px;
+      transform: rotate(-45deg);
+    }
+  }
+}

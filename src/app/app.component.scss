@@ -1,0 +1,15 @@
+@import "type-randomizer/type-randomizer.component.scss";
+
+.content-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  @media (max-width:500px) {
+    flex-direction: column;
+  }
+
+  .content-item {
+    width: 100%;
+    min-width: 500px;
+  }
+}
