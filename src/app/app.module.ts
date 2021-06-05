@@ -15,6 +15,7 @@ import { StatRandomizerComponent } from './stat-randomizer/stat-randomizer.compo
 import { AbilityRandomizerComponent } from './ability-randomizer/ability-randomizer.component';
 import { LinkIndicatorComponent } from './link-indicator/link-indicator.component';
 import {MatTableModule} from "@angular/material/table";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {MatTableModule} from "@angular/material/table";
       registrationStrategy: 'registerWhenStable:30000'
     }),
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
