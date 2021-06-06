@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Fakemon} from "../data/fakemon/types/Fakemon";
 
 @Component({
   selector: 'type-randomizer',
@@ -6,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./type-randomizer.component.scss']
 })
 export class TypeRandomizerComponent implements OnInit {
-
-  type = [ 'Normal', 'Fire', 'Water', 'Grass', 'Electric', 'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost', 'Dark', 'Dragon', 'Steel', 'Fairy'];
 
   primary = "";
   secondary = "";
@@ -18,24 +17,22 @@ export class TypeRandomizerComponent implements OnInit {
   size_imperial: number = 0;
   size_imperial_human: string = "";
 
-  weight_metric: number = 0;
   weight_metric_human: string = "";
-  weight_imperial: number = 0;
   weight_imperial_human: string = "";
+  fakemon: Fakemon;
 
-  constructor() { }
-
-  ngOnInit() {
-    this.primary = this.randomType();
-    this.secondary = this.randomType();
-    this.isDualType = this.primary !== this.secondary;
-
-    this.calculateSize( 10, 2000 );
-    this.calculateWeight( 100, 2000 );
+  constructor( fakemon: Fakemon ) {
+    this.fakemon = fakemon;
   }
 
-  randomType(): string {
-    return this.type[Math.floor(Math.random() * this.type.length)];
+  ngOnInit() {
+    this.primary = this.fakemon.type.primary;
+    this.secondary = this.fakemon.type.secondary;
+    this.isDualType = !this.fakemon.type.isMonoType();
+
+    this.calculateSize( 10, 2000 );
+    this.weight_metric_human = this.fakemon.weight.toKg();
+    this.weight_imperial_human = this.fakemon.weight.toLbs();
   }
 
   private calculateSize(min_cm: number, max_cm: number) {
@@ -44,13 +41,5 @@ export class TypeRandomizerComponent implements OnInit {
 
     this.size_metric_human = (this.size_metric / 100).toFixed(2) + " m";
     this.size_imperial_human = Math.floor( this.size_imperial / 12 ) + "\'" + (this.size_imperial % 12) + "\"";
-  }
-
-  private calculateWeight(min_gram: number, max_gram: number) {
-    this.weight_metric = (Math.random() * max_gram) + min_gram; //gram
-    this.weight_imperial = this.weight_metric / 453.6 //lbs
-
-    this.weight_metric_human = (this.weight_metric / 1000).toFixed(1) + " kg";
-    this.weight_imperial_human = this.weight_imperial.toFixed(2) + " lbs";
   }
 }
