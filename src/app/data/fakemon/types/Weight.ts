@@ -15,8 +15,12 @@ export class Weight {
     return new this( (Math.random() * max_gram) + min_gram );
   }
 
-  get toGram(): number {
+  get value(): number {
     return this._metric;
+  }
+
+  public toGram(): string {
+    return this._metric + " g";
   }
 
   public toKg(): string {

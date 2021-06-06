@@ -5,11 +5,13 @@ import {Abilities} from "./Abilities";
 import {Statistics} from "./Statistics";
 import {Region} from "./Region";
 import {Inspirations} from "./Inspirations";
+import {Height} from "./Height";
 
 @Injectable({
   providedIn: 'root'
 })
 export class Fakemon {
+  private _height: Height;
   private _weight: Weight;
   private _type: PokemonType;
   private _numEvolutions: number = 0;
@@ -18,7 +20,9 @@ export class Fakemon {
   private _region: Region;
   private _inspiration: any;
 
+
   constructor() {
+    this._height = Height.random();
     this._weight = Weight.random();
     this._type = PokemonType.random();
     this._numEvolutions = Math.floor(Math.random() * 2.9);
@@ -54,5 +58,9 @@ export class Fakemon {
 
   get inspiration(): any {
     return this._inspiration;
+  }
+
+  get height(): Height {
+    return this._height;
   }
 }

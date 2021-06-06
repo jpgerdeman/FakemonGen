@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Fakemon} from "../data/fakemon/types/Fakemon";
 
 @Component({
   selector: 'num-evolutions-randomizer',
@@ -7,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NumEvolutionsRandomizerComponent implements OnInit {
 
-  constructor() { }
+  fakemon: Fakemon;
 
-  ngOnInit(): void {
+  constructor( fakemon: Fakemon ) {
+    this.fakemon = fakemon;
   }
 
-  random() {
-    return Math.floor(Math.random() * 2.9);
+  ngOnInit() {
   }
 }

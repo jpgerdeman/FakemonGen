@@ -1,15 +1,15 @@
 <mat-card>
   <mat-card-content>
     <mat-card-title>Type</mat-card-title>
-    <span class="type type-{{primary}}">{{primary}}</span>
-    <ng-container *ngIf="isDualType">
-      <span class="type type-{{secondary}}">{{secondary}}</span>
+    <span class="type type-{{fakemon.type.primary}}">{{fakemon.type.primary}}</span>
+    <ng-container *ngIf="!fakemon.type.isMonoType()">
+      <span class="type type-{{fakemon.type.secondary}}">{{fakemon.type.secondary}}</span>
     </ng-container>
     <div>
-      Height: {{size_imperial_human}} ({{size_metric_human}})
+      Height: {{fakemon.height.toFeet()}} ({{fakemon.height.toMeter()}})
     </div>
     <div>
-      Weight: {{weight_imperial_human}} ({{weight_metric_human}})
+      Weight: {{fakemon.weight.toLbs()}} ({{fakemon.weight.toKg()}})
     </div>
   </mat-card-content>
 </mat-card>

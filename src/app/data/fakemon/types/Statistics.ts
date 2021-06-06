@@ -16,6 +16,17 @@ export class Statistics {
     this.specialDefense = specialDefense;
     this.speed = speed;
   }
+  
+  public toArray(): Array<Stat> {
+    return [
+      this.hp,
+      this.attack,
+      this.defense,
+      this.specialAttack,
+      this.specialDefense,
+      this.speed
+    ]
+  }
 
   public static random() {
     return new this(

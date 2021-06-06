@@ -1,4 +1,4 @@
-import {Ability} from "../../../ability-randomizer/Ability.type";
+import {Ability} from "./Ability";
 
 export class Abilities
 {

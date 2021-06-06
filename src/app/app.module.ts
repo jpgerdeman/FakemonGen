@@ -16,7 +16,7 @@ import { AbilityRandomizerComponent } from './ability-randomizer/ability-randomi
 import { LinkIndicatorComponent } from './link-indicator/link-indicator.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatButtonModule} from "@angular/material/button";
-import {Fakemon} from "./Fakemon";
+import {Fakemon} from "./data/fakemon/types/Fakemon";
 
 @NgModule({
   declarations: [
